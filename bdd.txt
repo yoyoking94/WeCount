@@ -1,0 +1,42 @@
+//  Base de données 
+//  Créer en POSTGRE SQL
+//  Avec les notions vu en Licence
+
+
+DROP TABLE [IF EXISTS] 
+   user,
+   task,
+   assignment,
+   comment,
+[CASCADE | RESTRICT];
+
+CREAT TABLE user (
+    user_id serial PRIMARY KEY,
+    name VARCHAR (200) NOT NULL,
+    email VARCHAR (200) NOT NULL,
+    post VARCHAR (40) NOT NULL,
+)
+
+CREATE TABLE task (
+    FOREIGN KEY (user_id) REFERENCES user (user_id),
+    task_id serial PRIMARY KEY,
+    title VARCHAR (20) NOT NULL,
+    description TEXT NOT NULL,
+    creationDate DATE NOT NULL DEFAULT CURRENT_DATE,
+    deadline DATE NOT NULL,
+    taskDone DATE NOT NULL,
+    statut VARCHAR (20) NOT NULL, 
+)
+
+CREATE TABLE assignment (
+    FOREIGN KEY (name) REFERENCES user (name),
+    right VARCHAR (11)
+)
+
+CREATE TABLE comment (
+    FOREIGN KEY (user_id) REFERENCES user (user_id),
+    FOREIGN KEY (task_id) REFERENCES task (task_id),
+    text TEXT NOT NULL, 
+    date DATE NOT NULL DEFAULT CURRENT_DATE,
+)
+
