@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCount | Yovish MOONESAMY</title>
+
+    <!-- style -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            width: 100%;
+            min-height: 100vh;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main */
+        main {
+            width: 100%;
+            min-height: 80vh;
+        }
+
+        .card {
+            width: 450px;
+            height: 100%;
+            min-width: 350px;
+
+            border: 2px solid rgb(100, 100, 100);
+            border-radius: 12px;
+            padding: 25px;
+
+            background-color: white;
+        }
+
+        .card>div {
+            margin: 25px 0;
+        }
+
+        .uI {
+            color: rgb(90, 65, 191);
+            background-color: rgb(216, 206, 237);
+            border-radius: 50px;
+            padding: 2% 5%;
+            width: auto;
+        }
+
+        .SPW {
+            font-weight: bold;
+        }
+
+
+
+        .middle {
+            width: 350px;
+            justify-content: flex-start;
+        }
+
+        .userImages {
+            position: relative;
+
+            padding: 0 30%;
+            margin-left: 35px;
+        }
+
+        .userImages>img {
+            width: 50px;
+            position: absolute;
+        }
+
+        .img1 {
+            z-index: 1;
+        }
+
+        .img2 {
+            z-index: 2;
+            margin-left: 70px;
+        }
+
+        .img3 {
+            z-index: 3;
+            margin-left: 140px;
+        }
+
+        .buttonInvite {
+            border-radius: 50px;
+            padding: 10px 20px;
+
+            background-color: rgb(46, 172, 227);
+            color: white;
+        }
+
+        .AC {
+            border: 2px solid rgb(100, 100, 100);
+            border-radius: 50px;
+            padding: 10px;
+
+            width: 325px;
+            margin: 2% auto !important;
+
+            justify-content: space-around;
+        }
+    </style>
+    <!-- end Style -->
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/ff34abd670.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ff34abd670.css" crossorigin="anonymous">
+</head>
+
+<body class="center">
+    <main class="center">
+        <div class="card">
+            <div>
+                <span class="uI">User Interface</span>
+            </div>
+            <div>
+                <span class="SPW">Service Page Website</span>
+            </div>
+            <div>
+                <span>Make a page display about services for websites company with blue and red colors</span>
+            </div>
+            <div class="center middle">
+                <div class="center">
+                    <span><i class="fa-regular fa-circle-check"></i></span>
+                    <span>0/20</span>
+                </div>
+                <div class="center userImages">
+                    <img class="img1" src="https://yovish.space/1.png" alt="user Image">
+                    <img class="img2" src="https://yovish.space/2.png" alt="user Image">
+                    <img class="img3" src="https://yovish.space/3.png" alt="user Image">
+                </div>
+                <div>
+                    <span class="buttonInvite">Invite</span>
+                </div>
+            </div>
+            <div class="AC center">
+                <span><i class="fa-sharp fa-solid fa-link"></i> 4 Attachment</span>
+                <span>|</span>
+                <span><i class="fa-regular fa-message"></i> 10 Comment</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
